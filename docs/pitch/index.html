@@ -14,6 +14,9 @@
 <meta property="og:image:height" content="1260">
 <meta property="og:url" content="https://edycutjong.github.io/redacted-game/pitch/">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,900&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
   :root{
     --amber:#FACC15;
@@ -31,11 +34,12 @@
   body{
     background:var(--base);
     color:var(--ink);
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-family:'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
     line-height:1.5;
     overflow:hidden;
     -webkit-font-smoothing:antialiased;
   }
+  h1,h2,h3{font-family:'Fraunces', Georgia, 'Times New Roman', serif;}
   .mono{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;}
 
   /* ===== deck chrome ===== */
@@ -262,7 +266,7 @@
       is how the crowd un-redacts the truth.
     </p>
     <p class="mono" style="color:var(--muted2);font-size:12px;margin-top:40px;">
-      Solo dev · zero runtime AI · 158 tests green
+      Solo dev · zero runtime AI · 269 tests green
     </p>
   </section>
 
@@ -390,7 +394,7 @@
     <div class="content">
       <table class="deck-table">
         <tr><th>Metric</th><th>Value</th></tr>
-        <tr><td>Unit tests, all green</td><td><strong>158</strong> (vitest, real-surface Redis stub)</td></tr>
+        <tr><td>Unit tests, all green</td><td><strong>269</strong> (vitest, real-surface Redis stub)</td></tr>
         <tr><td>Launch cases, each Monte-Carlo</td><td><strong>3 × 1000/1000</strong> deals reach truth</td></tr>
         <tr><td>Runtime AI / external calls</td><td><strong>0</strong> (http.enable: false)</td></tr>
         <tr><td>Enforced invariants (unit-tested)</td><td>I1–I4 + I2 truth-non-serialization (9 tests)</td></tr>
@@ -440,7 +444,7 @@
     <div class="badge-row">
       <span class="pill">Solo dev</span>
       <span class="pill">Zero AI</span>
-      <span class="pill">158 tests</span>
+      <span class="pill">269 tests</span>
       <span class="pill">3 cases × 1000/1000</span>
     </div>
     <p class="mono" style="color:var(--muted2);font-size:12px;margin-top:36px;">
