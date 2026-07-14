@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "redacted-game",
+  "name": "the-redacted-game",
   "version": "1.0.0",
   "description": "🕵️ Asymmetric-information detective game — each player holds different censored evidence; zero AI, handcrafted linted cases (Devvit)",
   "license": "MIT",
