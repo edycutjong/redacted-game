@@ -1,0 +1,36 @@
+# dependencies
+node_modules/
+
+# build output
+dist/
+
+# devvit
+.devvit/
+
+# test / coverage
+coverage/
+
+# Asset workshop (large local exports, not needed in the repo)
+docs/assets/
+
+# local env & editor droppings
+*.local
+.env
+.env.*
+!.env.example
+.DS_Store
+
+# harness / misc
+*.tsbuildinfo
+.eslintcache
+npm-debug.log*
+yarn-error.log*
+
+# N/A for this Devvit Web app (no served localhost): Playwright report /
+# test-results / Lighthouse CI are not part of the harness — see README "Testing".
+/playwright-report/
+/test-results/
+.lighthouseci/
+
+# NOTE: cases/compiled/*.bundle.json and src/server/cases/registry.ts are
+# GENERATED but intentionally committed — the runtime imports the registry.

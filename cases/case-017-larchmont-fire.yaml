@@ -1,0 +1,409 @@
+# CASE #17 — THE LARCHMONT FIRE
+# The engineered demo case (see SEED_DATA.md). The pawn-ticket shard SH31 is
+# the pivot-pool head: every first-seen account (every judge) receives a
+# board-absent shard, and SH31 completes the elimination of the crowd-favorite
+# suspect the moment it is filed (61% -> 63%).
+#
+# All names, places and businesses are fictional. Closed world: everything
+# needed to solve the case is inside this file.
+
+format: 1
+id: case-017
+number: 17
+title: The Larchmont Fire
+tagline: A pawnshop burns at one in the morning. The owner never walks out. His hundred-dollar watch does.
+author: rd_case_desk
+era: "October, 1947"
+question: Who set the Larchmont fire?
+
+suspects:
+  - id: S1
+    name: Vera Kessler
+    blurb: The widow. Says she took the 9:40 evening train to her sister in Halbrook and learned of the fire by wire. The insurance man keeps calling her "the beneficiary."
+  - id: S2
+    name: Dale Moran
+    blurb: Night watchman at the freight yard behind the shop. Owed money all over the Row. Seen near the yard fence that evening, and everyone knows he knew the alley like his own pocket.
+  - id: S3
+    name: Felix Abernathy
+    blurb: Rival pawnbroker three doors down, sixty years old and twice as bitter. Told anyone who would listen that Kessler's ruin would be "a civic improvement."
+  - id: S4
+    name: Ivo Brandt
+    blurb: A drifter who did rough carpentry for shops on the Row. Quiet, tall, kept his gloves on indoors. Nobody has seen him since the morning after the fire.
+
+docs:
+  - id: D1
+    title: FIRE MARSHAL'S PRELIMINARY
+    lines:
+      - text: "Structure: Larchmont Pawnbrokers & Loan, 411 Carden Row. Two floors, brick front, timber rear. Total loss of stock floor; rear office partially standing."
+      - text: "Deceased recovered at the foot of the stock-room stair: Emmett Kessler, proprietor, 58. See coroner's findings."
+      - shard: SH01
+      - shard: SH06
+      - shard: SH08
+      - shard: SH10
+      - shard: SH11
+      - shard: SH15
+      - shard: SH17
+      - text: "Public speculation that the fire was 'set for the insurance' is noted and is not evidence. The Row talks; this office measures."
+  - id: D2
+    title: CORONER'S FINDINGS
+    lines:
+      - text: "Subject: Kessler, Emmett. Cause of death: smoke inhalation; contributing, blunt contact with stair rail during collapse. No wounds ante-mortem beyond the fall."
+      - shard: SH09
+      - shard: SH20
+      - text: "Effects released to the estate except items held as evidence."
+  - id: D3
+    title: WITNESS STATEMENTS (CANVASS)
+    lines:
+      - text: "Statement of V. Kessler (public record, excerpt): 'I took the 9:40 to my sister's in Halbrook and learned of the fire by wire in the morning.'"
+      - shard: SH02
+      - shard: SH03
+      - shard: SH04
+      - shard: SH13
+      - shard: SH18
+      - shard: SH19
+      - shard: SH24
+      - shard: SH26
+      - shard: SH32
+      - shard: SH34
+      - shard: SH36
+      - shard: SH38
+      - text: "Canvass note: the Row is unanimous that watchman Moran 'owed everybody and dodged nobody.' Sentiment is not a timeline."
+  - id: D4
+    title: PRECINCT 9 — BLOTTER & DOCKETS
+    lines:
+      - shard: SH05
+      - shard: SH12
+      - shard: SH14
+      - shard: SH16
+      - shard: SH21
+      - shard: SH22
+      - shard: SH23
+      - shard: SH25
+      - shard: SH27
+      - shard: SH28
+      - shard: SH30
+      - text: "Desk memorandum: inquiries regarding the watchman Moran should be routed through the docket clerk, not the newspapers."
+  - id: D5
+    title: LEDGERS & PERSONAL EFFECTS
+    lines:
+      - shard: SH07
+      - shard: SH29
+      - shard: SH31
+      - shard: SH33
+      - shard: SH35
+      - shard: SH37
+      - shard: SH39
+      - shard: SH40
+      - shard: SH41
+      - text: "Estate inventory continues. The shop's pledge register survived in the fireproof drawer and is being transcribed."
+  - id: D6
+    title: THE LARCHMONT COURIER (CLIPPINGS)
+    lines:
+      - text: "ROW FIRE CLAIMS PAWNBROKER — 'A hard man, a harder autumn,' says the street. Police decline to call it arson. The street declines to call it anything else."
+      - shard: SH42
+      - shard: SH43
+      - shard: SH44
+      - shard: SH45
+      - shard: SH46
+      - shard: SH47
+      - shard: SH48
+      - shard: SH49
+      - text: "The Courier reminds readers that a man is innocent until the Row says otherwise twice."
+
+shards:
+  # ---- F01: the fire began after one a.m. ----
+  - id: SH01
+    doc: D1
+    text: "Alarm received 1:26 a.m. Point of origin flashed hot and fast; the stock floor was gone in minutes, not hours."
+    supports: [F01]
+  - id: SH02
+    doc: D3
+    text: "The courthouse tower clock, scorched on its Row face, stopped dead at 1:17."
+    supports: [F01]
+  - id: SH03
+    doc: D3
+    text: "Milk-cart driver (Ostrander Dairy): passed 411 Carden at 12:40 — windows dark, street quiet, nothing burning."
+    supports: [F01]
+  - id: SH04
+    doc: D3
+    text: "Corner bakery night crew: first smoke smelled on the draft a little after one; they set their proofing by the hour bell."
+    supports: [F01]
+  - id: SH05
+    doc: D4
+    text: "Call-box log: patrol reported the Row 'quiet, all doors tried' at 12:45 a.m."
+    supports: [F01]
+
+  # ---- F02: set with naphtha from the locked back room ----
+  - id: SH06
+    doc: D1
+    text: "Three naphtha tins, lids off, fused to the back-room floor at the seat of the burn."
+    supports: [F02]
+  - id: SH07
+    doc: D5
+    text: "Stock inventory, Tuesday entry: 'naphtha, 3 tins, to the back room — cleaning stock before appraisal.'"
+    supports: [F02]
+  - id: SH08
+    doc: D1
+    text: "Char pattern runs in a V from the back room outward; the fire walked from the rear of the shop to the front, not the other way."
+    supports: [F02]
+  - id: SH09
+    doc: D2
+    text: "Soot distribution in the airway is consistent with a flash ignition of light spirit, not a slow smoulder."
+    supports: [F02]
+
+  # ---- F03: entry over the rear yard fence ----
+  - id: SH10
+    doc: D1
+    text: "Fresh scrapes along the top rail of the six-foot yard fence, inward and outward sets both."
+    supports: [F03]
+  - id: SH11
+    doc: D1
+    text: "Heel prints both sides of the fence in the soft cinder: a man's boot, size eleven or near it."
+    supports: [F03, F12]
+  - id: SH12
+    doc: D4
+    text: "Rear yard gate found chained and locked from the inside; the chain shows no cuts and the lock no scratches."
+    supports: [F03]
+  - id: SH14
+    doc: D4
+    text: "Yard boy's statement: the gate chain was Kessler's own dusk habit, latched every evening at close without fail."
+    supports: [F03]
+
+  # ---- F04: the figure on the fence was tall ----
+  - id: SH13
+    doc: D3
+    text: "Mrs. Petty, rooming house window: 'A tall man came over the fence after one — six foot if he was an inch. He favored one hand.'"
+    supports: [F04, F12]
+  - id: SH15
+    doc: D1
+    text: "Reach marks on the fence rail put the climber's grip at six-foot-two off the ground; a short man vaults lower."
+    supports: [F04]
+
+  # ---- F05: the setter seared his right wrist ----
+  - id: SH16
+    doc: D4
+    text: "St. Anselm's charity ward intake, 4:10 a.m.: male, tall, gave the name 'E. Braun' — flash burn, right wrist. Left before the sister returned with iodine."
+    supports: [F05, F12]
+  - id: SH17
+    doc: D1
+    text: "Scrap of scorched shirt cuff snagged on the fence wire, blood on the weave, burned through at the button."
+    supports: [F05]
+  - id: SH18
+    doc: D3
+    text: "All-night pharmacist, Ninth & Carden: sold a burn dressing about half past three to a tall man who kept his right hand in his coat."
+    supports: [F05, F12]
+
+  # ---- F06: the Hollis watch left the scene with the setter ----
+  - id: SH19
+    doc: D3
+    text: "Kessler's niece: the Hollis hunter-case watch was on his chain when he locked up at six — he wound it on the step like always."
+    supports: [F06]
+  - id: SH20
+    doc: D2
+    text: "Effects on the body: watch chain snapped at the third link. No watch recovered on or near the deceased."
+    supports: [F06]
+  - id: SH21
+    doc: D4
+    text: "The floor safe came through the fire shut and intact; cash drawer beneath the register untouched, coin melted in its tray."
+    supports: [F06]
+  - id: SH22
+    doc: D4
+    text: "Cordon log: no person entered the ruin between the first engine and the marshal's walk-through at dawn."
+    supports: [F06]
+  - id: SH40
+    doc: D5
+    text: "Aetna Mutual memo: no trace of the scheduled Hollis watch in the debris sweep; adjuster recommends paying it out as destroyed in the fire."
+    supports: [F06]
+
+  # ---- F07: Moran was in the Precinct 9 drunk tank ----
+  - id: SH23
+    doc: D4
+    text: "Blotter, 11:38 p.m.: MORAN, DALE — drunk and disorderly outside the Aqueduct Club. Held, tank two."
+    supports: [F07]
+  - id: SH24
+    doc: D3
+    text: "Kelsey Falls depot agent: Abernathy came up on the last evening stage, canes first, cursing the steps — and was still at the Falls come morning."
+    supports: [F13, F14]
+  - id: SH25
+    doc: D4
+    text: "Property envelope for Moran sealed and timestamped 11:52 p.m.; contents logged: keys, tobacco, four dollars."
+    supports: [F07]
+  - id: SH26
+    doc: D3
+    text: "Officer Kearns: 'I booked Moran myself before midnight. He couldn't have walked a chalk line, let alone a fence.'"
+    supports: [F07]
+  - id: SH27
+    doc: D4
+    text: "Release docket: Moran discharged at noon the 13th, fined two dollars, signed out by the desk sergeant."
+    supports: [F07]
+
+  # ---- F08: Moran is small and unmarked ----
+  - id: SH28
+    doc: D4
+    text: "Booking sheet description, Moran: five foot four, slight build, hands and wrists free of marks or burns."
+    supports: [F08]
+  - id: SH29
+    doc: D5
+    text: "Tailor's measurement card on file with his lodge suit order: Moran, D. — 5'4\", sleeve 30."
+    supports: [F08]
+  - id: SH30
+    doc: D4
+    text: "Release examination note, noon the 13th: hands steady, skin unbroken; no dressing, no burn."
+    supports: [F08]
+
+  # ---- F09: the watch was pledged at Crane Bros. on the 14th ----
+  - id: SH31
+    doc: D5
+    text: "Crane Bros. pawn ticket #4471, found tucked in a river-district flop ledger: one Hollis hunter-case watch — dated the 14th, two days AFTER the fire."
+    supports: [F09]
+  - id: SH32
+    doc: D3
+    text: "Crane Bros. counter clerk: 'Tall man pledged the Hollis on the 14th. Kept his right wrist wrapped. Signed rough, took eleven dollars, no haggle.'"
+    supports: [F09, F04, F12]
+  - id: SH33
+    doc: D5
+    text: "Crane Bros. register photostat, the 14th: entry 4471, 'Hollis hunter, engine-turned case' — serial matching Kessler's insurance schedule."
+    supports: [F09]
+
+  # ---- F10: Vera was in the Marigold Room card game ----
+  - id: SH34
+    doc: D3
+    text: "Marigold Room croupier: 'Mrs. Kessler sat the back table from ten till three. Lost forty dollars and never once looked at the clock.'"
+    supports: [F10]
+  - id: SH35
+    doc: D5
+    text: "Marigold chip receipt, countersigned V.K., timed 2:10 a.m. — the house stamps the hour on every marker over twenty dollars."
+    supports: [F10]
+  - id: SH36
+    doc: D3
+    text: "Marigold doorman's book: 'Mrs. K in by cab, five past ten. Cab came up from Union Station way.'"
+    supports: [F10]
+  - id: SH37
+    doc: D5
+    text: "Hat-check stub #88, grey coat with fox collar, taken in at 10:05 and out at ten of three."
+    supports: [F10]
+  - id: SH49
+    doc: D6
+    text: "Courier society note, held from print as a courtesy: a certain judge's midweek game 'ran to dawn, and the widow K. played it to the felt.'"
+    supports: [F10]
+
+  # ---- F11: the Halbrook alibi was cover ----
+  - id: SH38
+    doc: D3
+    text: "Division conductor: the 9:40 to Halbrook was annulled that night for track work — no through service after eight."
+    supports: [F11]
+  - id: SH39
+    doc: D5
+    text: "Telegram from the sister at Halbrook, morning of the 13th: 'YOU NEVER CAME. WIRE ME WHERE YOU SLEPT.'"
+    supports: [F11]
+  - id: SH41
+    doc: D5
+    text: "Union Station ticket agent: no Halbrook fare sold to any woman after six that evening; the annulment board was up by seven."
+    supports: [F11]
+
+  # ---- F13: Abernathy was in Kelsey Falls ----
+  - id: SH42
+    doc: D6
+    text: "Odd Fellows lodge minutes, Kelsey Falls chapter: F. Abernathy presided from his chair, canes crossed on the table, until the closing gavel at 2 a.m."
+    supports: [F13, F14]
+  - id: SH43
+    doc: D6
+    text: "Kelsey Falls House register: 'F. Abernathy, city' — room taken at 2:40 a.m., forty miles from Carden Row."
+    supports: [F13]
+  - id: SH44
+    doc: D6
+    text: "Motor-stage driver: carried Abernathy back to the city on the 6 a.m. run; 'grumbled the whole forty miles about the gavel splitting.'"
+    supports: [F13]
+  - id: SH47
+    doc: D6
+    text: "Long-distance call slip: Abernathy to his housekeeper, placed from the Kelsey Falls exchange at 1:55 a.m."
+    supports: [F13]
+
+  # ---- F14: Abernathy could not cross a fence ----
+  - id: SH45
+    doc: D6
+    text: "Physician's note on file with his lodge insurance: Abernathy walks with two canes since the June fall; the hip will not bear a stair unaided."
+    supports: [F14]
+  - id: SH46
+    doc: D6
+    text: "Courier photograph caption, June: 'Pawnbroker F. Abernathy, on two sticks since his tumble, supervises his window from a chair.'"
+    supports: [F14]
+  - id: SH48
+    doc: D6
+    text: "County physician's invoice, September: plaster and X-ray plates, right hip — 'no unassisted climbing or ladder work.'"
+    supports: [F14]
+
+facts:
+  - id: F01
+    text: "The fire began after one in the morning, hours after the shop closed."
+  - id: F02
+    text: "It was set with naphtha kept in the locked back room."
+  - id: F03
+    text: "The setter came and went over the rear yard fence."
+  - id: F04
+    text: "The figure on the fence was tall — six foot or better."
+  - id: F05
+    text: "The setter seared his right wrist in the flash and sought treatment before dawn."
+  - id: F06
+    text: "Kessler's Hollis watch left the scene with the setter that night."
+  - id: F07
+    text: "Moran spent that night in the Precinct 9 drunk tank, 11:38 p.m. to noon."
+  - id: F08
+    text: "Moran is five-foot-four, slight, and his hands were unmarked going in and coming out."
+  - id: F09
+    text: "The Hollis watch was pledged at Crane Bros. on the 14th by a tall man with a dressed right wrist."
+  - id: F10
+    text: "Vera spent ten to three at the Marigold Room's back table."
+  - id: F11
+    text: "Vera never went to Halbrook — the train alibi was cover for the card room."
+  - id: F12
+    text: "The setter was a tall man; the prints, the ward intake and the counter clerk agree."
+  - id: F13
+    text: "Abernathy was forty miles away in Kelsey Falls until nearly three."
+  - id: F14
+    text: "Abernathy, on two canes since June, could not have crossed a six-foot fence."
+
+eliminations:
+  - suspect: S1
+    paths:
+      - [F01, F10]
+      - [F12]
+      - [F11, F12]
+  - suspect: S2
+    paths:
+      - [F07]
+      - [F04, F08]
+      - [F06, F09, F08]
+      - [F05, F08]
+  - suspect: S3
+    paths:
+      - [F01, F13]
+      - [F02, F03, F14]
+      - [F04, F14]
+
+contradictions:
+  - a: SH38
+    b: SH39
+    note: "The 9:40 never ran — and the sister waited at Halbrook for no one. The widow's public statement cannot survive both lines."
+  - a: SH40
+    b: SH31
+    note: "A watch cannot burn to nothing on the 12th and be pledged intact on the 14th. Someone walked it out of the fire."
+
+pivots: [SH31, SH13, SH16]
+
+# Demo seed: leave the crowd-favorite watchman (S2 Moran) STANDING at the ~61%
+# seed so a lone judge's reserved pivot shard (the pawn ticket SH31) is what
+# finally strikes him. The seed planner (core/demoSeed.ts) and the lint demo
+# check both enforce this.
+reserve: [S2]
+
+truth:
+  culprit: S4
+  motive: "Kessler hired Brandt to torch his own failing shop for the insurance. Brandt lit the naphtha early, before Kessler had cleared the stair — then snapped the Hollis from the dead man's chain as his fee, went over the fence, and burned his wrist doing it."
+  summary: "Ivo Brandt set the Larchmont fire. The tall figure on the fence, the seared right wrist treated at St. Anselm's under 'E. Braun', and the Hollis watch pledged at Crane Bros. on the 14th all belong to the same man — the carpenter who knew where the naphtha sat and hasn't been seen since."
+  reveal:
+    - "The fire was set after one, with the shop's own naphtha, by someone who left over the yard fence."
+    - "The widow was at the Marigold tables. The watchman was in the tank. The rival was forty miles away on two canes."
+    - "The setter was tall, seared his right wrist, and carried Kessler's Hollis watch out through the smoke."
+    - "On the 14th, a tall man with a dressed wrist pledged that watch at Crane Bros. for eleven dollars."
+    - "Ivo Brandt built Kessler's shelves, knew the back room, and vanished the morning after. The ticket in the flop ledger was his receipt — and his confession."

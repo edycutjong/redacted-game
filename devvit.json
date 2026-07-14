@@ -1,0 +1,91 @@
+{
+  "$schema": "https://developers.reddit.com/schema/config-file.v1.json",
+  "name": "redacted-game",
+  "post": {
+    "dir": "dist/client",
+    "entrypoints": {
+      "default": {
+        "inline": true,
+        "entry": "splash.html"
+      },
+      "game": {
+        "entry": "game.html",
+        "height": "tall"
+      }
+    }
+  },
+  "server": {
+    "dir": "dist/server",
+    "entry": "index.cjs"
+  },
+  "permissions": {
+    "http": {
+      "enable": false
+    },
+    "redis": true,
+    "realtime": true,
+    "reddit": {
+      "enable": true,
+      "asUser": ["SUBMIT_COMMENT"]
+    }
+  },
+  "scheduler": {
+    "tasks": {
+      "case-drop": {
+        "endpoint": "/internal/cron/drop",
+        "cron": "0 0 * * *"
+      },
+      "shard-drip": {
+        "endpoint": "/internal/cron/drip",
+        "cron": "0 * * * *"
+      },
+      "verdict": {
+        "endpoint": "/internal/cron/verdict",
+        "cron": "0 21 * * *"
+      }
+    }
+  },
+  "triggers": {
+    "onPostCreate": "/internal/triggers/post-create",
+    "onCommentCreate": "/internal/triggers/on-comment"
+  },
+  "menu": {
+    "items": [
+      {
+        "label": "REDACTED: Seed Demo Case",
+        "description": "Restore Case #17 at the exact 61% demo state (idempotent)",
+        "location": "subreddit",
+        "forUserType": "moderator",
+        "endpoint": "/internal/menu/seed-demo"
+      },
+      {
+        "label": "REDACTED: Launch Bonus Case",
+        "description": "Drop the next unlaunched case immediately",
+        "location": "subreddit",
+        "forUserType": "moderator",
+        "endpoint": "/internal/menu/bonus-case"
+      },
+      {
+        "label": "REDACTED: Approve Forge Case",
+        "description": "Approve the oldest pending community-forged case",
+        "location": "subreddit",
+        "forUserType": "moderator",
+        "endpoint": "/internal/menu/approve-forge"
+      },
+      {
+        "label": "REDACTED: Hide Reported Card",
+        "description": "Hide the most-reported evidence card on the live case",
+        "location": "subreddit",
+        "forUserType": "moderator",
+        "endpoint": "/internal/menu/hide-card"
+      }
+    ]
+  },
+  "dev": {
+    "subreddit": "RedactedGame"
+  },
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "vite build"
+  }
+}

@@ -1,0 +1,326 @@
+# CASE #19 — THE GILT CAGE
+# All names, places and businesses are fictional. Closed world.
+
+format: 1
+id: case-019
+number: 19
+title: The Gilt Cage
+tagline: The soprano hit her high C at eight and was dead of it by ten. The atomizer on her vanity sang the last note.
+author: rd_case_desk
+era: "December, 1947"
+question: Who poisoned Lilya Marchetti's throat spray?
+
+suspects:
+  - id: U1
+    name: Corinne Vale
+    blurb: The understudy, ten years younger and two rungs down. The gallery decided it was her before the curtain hit the boards — who else profits from a dead diva?
+  - id: U2
+    name: Emil Sarto
+    blurb: The maestro. Feuded with Marchetti over tempi in front of the whole pit, twice. A man who conducts grudges con fuoco.
+  - id: U3
+    name: Tibor Kadar
+    blurb: Her dresser, twenty years in her service. Handles every prop, every costume, every bottle on that vanity — including the atomizer, every single night.
+  - id: U4
+    name: Aldous Wren
+    blurb: The production's backer, a silver-flask man with a box on the grand tier and a standing claim on the diva's Sundays. She was leaving his company for Chicago in the spring.
+
+docs:
+  - id: R1
+    title: POLICE SURGEON & CHEMIST
+    lines:
+      - text: "Deceased: Marchetti, Lilya, 41, soprano. Collapsed in Act II of THE GILT CAGE at the Regina Opera House. Cause: prussic acid, administered by throat atomizer."
+      - shard: V01
+      - shard: V05
+      - shard: V10
+      - shard: V11
+      - shard: V14
+      - text: "Note for the gallery press: the poison was in the spray, not the wine, not the flowers, not the understudy's eyes."
+  - id: R2
+    title: HOUSE LOG — REGINA OPERA
+    lines:
+      - shard: V03
+      - shard: V04
+      - shard: V09
+      - shard: V18
+      - shard: V22
+      - shard: V25
+      - shard: V31
+      - text: "House rule 11: no visitor passes the corridor mirror during an interval without the doorman's chalk mark."
+  - id: R3
+    title: WITNESS STATEMENTS (COMPANY)
+    lines:
+      - text: "Statement of A. Wren (public record, excerpt): 'I looked in on Lilya at the interval to wish her a strong second act, as any friend of the house might.'"
+      - shard: V02
+      - shard: V07
+      - shard: V08
+      - shard: V19
+      - shard: V23
+      - shard: V24
+      - shard: V28
+      - shard: V32
+      - shard: V33
+      - shard: V36
+      - shard: V37
+      - shard: V39
+      - text: "Company sentiment runs hard against the understudy. Sentiment does not hold an atomizer."
+  - id: R4
+    title: FRONT-OF-HOUSE & CLOAK ROOM
+    lines:
+      - shard: V13
+      - shard: V15
+      - shard: V16
+      - shard: V17
+      - shard: V27
+      - shard: V34
+      - text: "Cloak-room note: checked articles are returned against brass tags; the girl remembers coats by their weight."
+  - id: R5
+    title: CONTRACTS & SUNDRY PAPERS
+    lines:
+      - shard: V06
+      - shard: V12
+      - shard: V20
+      - shard: V21
+      - shard: V26
+      - shard: V29
+      - shard: V30
+      - shard: V35
+      - shard: V38
+      - shard: V40
+      - text: "Sundry: a diva's superstitions are filed under standing orders, same as the fire rules."
+
+shards:
+  # ---- H01: the atomizer was clean at curtain, poisoned at the interval ----
+  - id: V01
+    doc: R1
+    text: "Chemist: residue confined to the top chamber — one refill's worth. The bulb and lower well are clean. The poison went in late."
+    supports: [H01]
+  - id: V02
+    doc: R3
+    text: "The maid: 'I misted my own throat from her atomizer at curtain, as she makes me do against tampering. I am standing here telling you about it.'"
+    supports: [H01]
+  - id: V03
+    doc: R2
+    text: "Stage manager's log: first interval, twenty-one minutes by the house clock, curtain to curtain."
+    supports: [H01]
+  - id: V04
+    doc: R2
+    text: "Call-boy: the atomizer stood on the vanity at the interval bell — he saw it when he chalked the five-minute call on her door."
+    supports: [H01]
+  - id: V05
+    doc: R1
+    text: "Police surgeon: the dose acted within minutes. She sprayed in the wings before her Act II entrance and was down before the cabaletta."
+    supports: [H01]
+
+  # ---- H02: the poisoner stood gloved at the vanity during the interval ----
+  - id: V06
+    doc: R5
+    text: "Carpet report: fresh crush marks before the vanity, heels together — a standing visitor, unhurried."
+    supports: [H02]
+  - id: V07
+    doc: R3
+    text: "Wig-mistress: 'The powder I spilled at curtain was walked through once, by one pair of shoes, toes to the vanity.'"
+    supports: [H02]
+  - id: V08
+    doc: R3
+    text: "Doorman: room A's latch clicked twice in the interval — once in, once out. No third visit."
+    supports: [H02]
+  - id: V09
+    doc: R2
+    text: "Corridor mirror line, house rule 11: one chalk mark issued in the interval — a grand-tier visitor, logged by weight of coat and no name asked."
+    supports: [H02]
+  - id: V10
+    doc: R1
+    text: "Fingerprint man: the atomizer bulb wiped to a shine — not one print where every night there should be dozens."
+    supports: [H02]
+  - id: V11
+    doc: R1
+    text: "Vanity glass: clean arcs through the powder film, the swipe of a gloved hand tidying after itself."
+    supports: [H02]
+  - id: V12
+    doc: R5
+    text: "Found under the vanity lip: one grey kid glove-button, thread fresh-torn, the kind sewn at a gentleman's outfitter."
+    supports: [H02]
+
+  # ---- H04: the poison traveled in a silver flask with a bitter-almond ghost ----
+  - id: V13
+    doc: R4
+    text: "Cloak-room girl: a silver hip flask came back to its coat after the interval smelling of bitter almonds. She marked the tag from habit."
+    supports: [H04]
+  - id: V14
+    doc: R1
+    text: "Chemist's swab of the flask neck: positive for prussic compound. The flask carried it; the atomizer received it."
+    supports: [H04]
+  - id: V15
+    doc: R4
+    text: "The flask's monogram has been scratched out — fresh bright metal under the burr, done with a pocket blade, done lately."
+    supports: [H04]
+  - id: V16
+    doc: R4
+    text: "Grand-tier barman: 'I filled no flask that night. House rule — and I would remember silver.'"
+    supports: [H04]
+  - id: V17
+    doc: R4
+    text: "Cloak-room tag ledger, interval column: the almond-ghost flask hung in coat-check 41 — the coat checked in by Aldous Wren's own man."
+    supports: [H04]
+
+  # ---- H05: Kadar never crossed the mirror line ----
+  - id: V18
+    doc: R2
+    text: "Sightline diagram: the dresser's bench sits square in the corridor mirror; the doorman watched Kadar's needle rise and fall the whole interval."
+    supports: [H05]
+  - id: V19
+    doc: R3
+    text: "Wig-mistress: 'I sat opposite Tibor on the bench all twenty-one minutes, complaining about the third wig. He never left his seam.'"
+    supports: [H05]
+  - id: V20
+    doc: R5
+    text: "The mended Act II cloak: two hundred and fourteen stitches in a twenty-minute seam — counted by the wardrobe master, who pays by the stitch."
+    supports: [H05]
+  - id: V21
+    doc: R5
+    text: "Call-boy: fetched Kadar grey thread at minute five and again at minute ten — 'he was on that bench both times, cross as a wet cat.'"
+    supports: [H05]
+
+  # ---- H06: Vale was on stage the whole interval ----
+  - id: V22
+    doc: R2
+    text: "Program, first interval: divertissement 'The Clockwork Garden' — C. Vale dances the mechanical nightingale before the curtain, in one."
+    supports: [H06]
+  - id: V23
+    doc: R3
+    text: "Prompter's book: Vale's marks are continuous through the divertissement — she is never off the boards longer than a breath."
+    supports: [H06]
+  - id: V24
+    doc: R3
+    text: "The Courier's critic, from his aisle seat: 'Miss Vale held the front of the curtain for the whole of the interval piece; I confess I timed her, having nothing kinder to do.'"
+    supports: [H06]
+  - id: V25
+    doc: R2
+    text: "Wardrobe: Vale is sewn into the nightingale pannier at the first-act curtain — a ten-minute job with two hands to cut her out."
+    supports: [H06]
+  - id: V26
+    doc: R5
+    text: "The maestro's beat sheet, kept in pencil: cue marks for the nightingale run unbroken — 'V. present throughout, mercifully on the beat.'"
+    supports: [H06]
+
+  # ---- H07: Vale had already signed for Chicago ----
+  - id: V27
+    doc: R4
+    text: "Contract on file with the house manager: Vale to the Chicago Lyric for the spring season — signed and sealed three weeks BEFORE the poisoning."
+    supports: [H07]
+  - id: V28
+    doc: R3
+    text: "Vale's agent, by wire: 'CHICAGO PAPERS CLOSED THE FIRST OF THE MONTH. SHE WAS COUNTING THE DAYS, NOT THE DIVA'S.'"
+    supports: [H07]
+  - id: V29
+    doc: R5
+    text: "House manager's countersignature and release: the understudy owed the Regina nothing after New Year's — the rung she is accused of killing for, she had already climbed past."
+    supports: [H07]
+
+  # ---- H08: Sarto conducted the entr'acte through the whole interval ----
+  - id: V30
+    doc: R5
+    text: "The entr'acte is Sarto's own arrangement, twenty-two minutes to the bar — he has never once let another stick touch it."
+    supports: [H08]
+  - id: V31
+    doc: R2
+    text: "House recording disc, cut nightly for the archive: the entr'acte runs unbroken, one hand on the rubato throughout — his, by every man in the pit."
+    supports: [H08]
+  - id: V32
+    doc: R3
+    text: "First desk, strings: 'The maestro never left the podium. We watch him for a living, monsieur.'"
+    supports: [H08]
+  - id: V33
+    doc: R3
+    text: "The harpist: 'He cued my page turns through the whole entr'acte, bar by bar, glaring, as is traditional.'"
+    supports: [H08]
+  - id: V34
+    doc: R4
+    text: "Box office runner: watched the pit from the rail the whole interval waiting on the receipts — 'the little maestro never stopped moving his arms.'"
+    supports: [H08]
+
+  # ---- H09: Sarto cannot be near almond compound ----
+  - id: V35
+    doc: R5
+    text: "Medical card carried in Sarto's pocketbook: severe almond-compound allergy; exposure closes his throat within the minute."
+    supports: [H09]
+  - id: V36
+    doc: R3
+    text: "Sarto's valet: 'I sniff his dressing room like a bloodhound each night. One macaroon in the flowers and we lose the maestro.'"
+    supports: [H09]
+  - id: V37
+    doc: R3
+    text: "Canteen standing order, posted since '45: no almond pastry in the artists' wing, by order of the management, for the maestro's sake."
+    supports: [H09]
+
+  # ---- H10: the atomizer sat outside Kadar's custody at intervals ----
+  - id: V38
+    doc: R5
+    text: "The diva's standing orders, item nine: at each interval the atomizer stands untouched on the vanity — 'no hand but mine after curtain,' her oldest superstition."
+    supports: [H10]
+  - id: V39
+    doc: R3
+    text: "Her maid: 'Tibor surrendered the spray to the vanity at first curtain, as he has done for twenty years. She would sack him for holding it one minute past.'"
+    supports: [H10]
+  - id: V40
+    doc: R5
+    text: "Key hook photograph: Kadar's key to room A hangs surrendered on the board at curtain, chalk-marked by the doorman — reclaimed only at the final bow."
+    supports: [H10]
+
+facts:
+  - id: H01
+    text: "The atomizer was clean at curtain and poisoned during the twenty-one-minute first interval."
+  - id: H02
+    text: "The poisoner stood gloved at the vanity in dressing room A during the interval."
+  - id: H04
+    text: "The poison traveled in a silver hip flask that came back to the cloak room smelling of bitter almonds."
+  - id: H05
+    text: "Kadar never crossed the mirror line — he sat the corridor bench, sewing, in full view."
+  - id: H06
+    text: "Vale was on stage before the curtain for the entire interval divertissement."
+  - id: H07
+    text: "Vale had already signed for Chicago — the motive the gallery gave her did not exist."
+  - id: H08
+    text: "Sarto conducted his own entr'acte from the pit through the whole interval."
+  - id: H09
+    text: "Sarto cannot come within a breath of almond compound and live to conduct the coda."
+  - id: H10
+    text: "At intervals the atomizer sat outside Kadar's custody, on the vanity, by the diva's own standing order."
+
+eliminations:
+  - suspect: U1
+    paths:
+      - [H06]
+      - [H01, H07]
+      - [H02, H06]
+  - suspect: U2
+    paths:
+      - [H08]
+      - [H04, H09]
+      - [H01, H09]
+  - suspect: U3
+    paths:
+      - [H05]
+      - [H01, H10]
+      - [H02, H05]
+
+contradictions:
+  - a: V02
+    b: V05
+    note: "The same atomizer was harmless in the maid's throat at eight and lethal in the diva's at ten. The interval is the murder weapon."
+  - a: V16
+    b: V13
+    note: "Filled nowhere in the house, yet it came back to its coat with a bitter ghost. What the flask carried, it brought from outside — already mixed."
+
+pivots: [V12, V17, V09]
+
+truth:
+  culprit: U4
+  motive: "She was leaving him — the company, the box on the grand tier, the standing claim on her Sundays — for Chicago in the spring. Wren decided that if the Regina could not keep her, nothing would."
+  summary: "Aldous Wren poisoned the throat spray. The one chalk mark past the mirror line was his; the crushed carpet and gloved arcs at the vanity were his; the almond-ghost flask with the scratched monogram hung in his own man's coat-check; and the grey kid glove-button under the vanity lip lost its thread when he tidied up after himself."
+  reveal:
+    - "The spray was clean at curtain — the maid misted her own throat from it and lived to say so."
+    - "The dresser never left his bench. The understudy never left the boards. The maestro never left the podium — and could not have carried that flask and finished the coda."
+    - "One visitor took the chalk past the mirror line: a grand-tier coat, no name asked."
+    - "The flask came back to coat-check 41 smelling of almonds, its monogram scratched to bright metal."
+    - "Coat-check 41 was Aldous Wren's. The glove-button under the vanity is grey kid, a gentleman's outfitter's work. She was leaving for Chicago; he made certain she left for nowhere."

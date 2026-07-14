@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="REDACTED icon: censor bars with one revealed glowing line">
+  <!-- REDACTED animated mark — one line escapes the censor. Textless, self-contained, t=0 frame is complete. -->
+  <defs>
+    <linearGradient id="rd-brand" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="var(--primary, #FACC15)"/>
+      <stop offset="100%" stop-color="var(--accent, #F43F5E)"/>
+    </linearGradient>
+    <linearGradient id="rd-shine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="rd-glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="rd-barclip"><rect x="104" y="218" width="304" height="52" rx="16"/></clipPath>
+    <style>
+      .rd-shine { animation: rd-shine 3.2s ease-in-out infinite; }
+      .rd-barglow { animation: rd-barglow 3.2s ease-in-out infinite; }
+      .rd-pin   { animation: rd-pin 2.4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      .rd-string{ stroke-dasharray: 6 8; animation: rd-string 1.1s linear infinite; }
+      @keyframes rd-shine { 0%,60% { transform: translateX(-340px); } 92%,100% { transform: translateX(340px); } }
+      @keyframes rd-barglow { 0%,60%,100% { opacity: 0.55; } 78% { opacity: 1; } }
+      @keyframes rd-pin   { 0%,100% { transform: scale(1); opacity: 0.85; } 50% { transform: scale(1.18); opacity: 1; } }
+      @keyframes rd-string{ to { stroke-dashoffset: -28; } }
+      @media (prefers-reduced-motion: reduce) { .rd-shine,.rd-barglow,.rd-pin,.rd-string { animation: none; } }
+    </style>
+  </defs>
+
+  <!-- Backplate: the file -->
+  <rect x="16" y="16" width="480" height="480" rx="112" fill="#0D0B08"/>
+  <rect x="16" y="16" width="480" height="480" rx="112" fill="none" stroke="url(#rd-brand)" stroke-opacity="0.3" stroke-width="6"/>
+
+  <!-- Censor bars -->
+  <g fill="#2B2620">
+    <rect x="104" y="120" width="304" height="52" rx="16"/>
+    <rect x="104" y="316" width="220" height="52" rx="16"/>
+    <rect x="104" y="404" width="270" height="40" rx="14"/>
+  </g>
+
+  <!-- Glow aura behind the revealed line -->
+  <rect class="rd-barglow" x="104" y="218" width="304" height="52" rx="16" fill="url(#rd-brand)" opacity="0.55" filter="url(#rd-glow)"/>
+  <!-- THE revealed line — your shard -->
+  <rect x="104" y="218" width="304" height="52" rx="16" fill="url(#rd-brand)"/>
+  <!-- typewriter tick marks on the revealed line -->
+  <g stroke="#0D0B08" stroke-width="10" stroke-linecap="round" opacity="0.85">
+    <line x1="136" y1="244" x2="188" y2="244"/>
+    <line x1="212" y1="244" x2="300" y2="244"/>
+    <line x1="324" y1="244" x2="376" y2="244"/>
+  </g>
+  <!-- Shine sweeping across the revealed line -->
+  <g clip-path="url(#rd-barclip)">
+    <rect class="rd-shine" x="200" y="210" width="110" height="70" fill="url(#rd-shine)" transform="skewX(-20)"/>
+  </g>
+
+  <!-- Red-string pin -->
+  <circle class="rd-pin" cx="396" cy="336" r="18" fill="var(--accent, #F43F5E)" filter="url(#rd-glow)"/>
+  <path class="rd-string" d="M396 336 Q300 300 240 336" fill="none" stroke="var(--accent, #F43F5E)" stroke-width="7" stroke-linecap="round" opacity="0.8"/>
+</svg>

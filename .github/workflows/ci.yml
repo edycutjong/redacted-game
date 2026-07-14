@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+# Cancel superseded runs on the same ref.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # Single real-gate pipeline. This is a Devvit Web app (DOM client + Hono server
+  # bundled by vite → dist/), so there is no served localhost: Lighthouse CI and
+  # Playwright-against-localhost are N/A and deliberately omitted (see README).
+  verify:
+    name: "Verify · lint → type-check → test:coverage → lint:cases → build"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint (eslint)
+        run: npm run lint
+
+      - name: Type check (tsc --noEmit)
+        run: npm run type-check
+
+      # Coverage is scoped (vitest.config.ts) to src/shared + src/server/core +
+      # src/server/routes + src/server/cases + the single Redis-touching
+      # store.ts/serialize.ts/keys.ts/viewer.ts/postComment.ts/redisLike.ts —
+      # the pure/mockable business logic — at a 100% threshold. src/client/**
+      # (React/DOM rendering, needs a real browser) and src/server/index.ts
+      # (process bootstrap — calls createServer(...).listen(...) at import
+      # time) are excluded on purpose.
+      - name: Unit tests + coverage (100% on shared/core/routes/store)
+        run: npm run test:coverage
+
+      - name: Case solvability + demo lint (Monte-Carlo 1000/1000)
+        run: npm run lint:cases
+
+      - name: Build (vite → dist/client + dist/server)
+        run: npm run build

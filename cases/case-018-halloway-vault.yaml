@@ -1,0 +1,337 @@
+# CASE #18 — THE HALLOWAY VAULT
+# All names, places and businesses are fictional. Closed world.
+
+format: 1
+id: case-018
+number: 18
+title: The Halloway Vault
+tagline: A vault that only opens for the right numbers opened at two in the morning for somebody who had them.
+author: rd_case_desk
+era: "November, 1947"
+question: Who emptied the Halloway vault?
+
+suspects:
+  - id: T1
+    name: Gordon Halloway
+    blurb: Manager of Marlowe County Savings — his name is on the door and the shortfall is on his desk. The Row likes a boss for a bank job; it saves thinking.
+  - id: T2
+    name: Mabel Quist
+    blurb: Head teller, fourteen years at the cage. Knows every drawer, every habit, every officer's signature — and exactly what she has never been allowed to know.
+  - id: T3
+    name: Arthur "Doc" Renz
+    blurb: Retired safecracker living over the barbershop. Did seven years for the Merchants' Trust job. Swears the game left him before his hands did.
+  - id: T4
+    name: Silas Nash
+    blurb: The night auditor, a careful man with a green eyeshade who counts other people's money and initials every page. Writes with his left hand and speaks to no one.
+
+docs:
+  - id: E1
+    title: EXAMINER'S REPORT — VAULT & PREMISES
+    lines:
+      - text: "Premises: Marlowe County Savings, Court Square branch. Vault opened and emptied of bearer bonds series B-112 through B-140 on the night of Sunday the 9th. Night porter found locked in the coal cellar, unharmed."
+      - shard: K01
+      - shard: K04
+      - shard: K05
+      - shard: K06
+      - shard: K07
+      - shard: K13
+      - shard: K14
+      - text: "The public is invited to believe the vault was 'cracked.' Nothing about this door was cracked. It was asked politely, in its own language."
+  - id: E2
+    title: BANK RECORDS & CORRESPONDENCE
+    lines:
+      - shard: K08
+      - shard: K09
+      - shard: K10
+      - shard: K11
+      - shard: K24
+      - shard: K25
+      - shard: K26
+      - shard: K27
+      - shard: K32
+      - shard: K33
+      - text: "File note: the auditor's October worksheets were signed out Friday and have not been returned."
+  - id: E3
+    title: WITNESS STATEMENTS (CANVASS)
+    lines:
+      - text: "Statement of G. Halloway (public record, excerpt): 'I was at the Elks' fish fry in Dorsett and heard of it by telephone at four.'"
+      - shard: K02
+      - shard: K03
+      - shard: K12
+      - shard: K15
+      - shard: K17
+      - shard: K18
+      - shard: K30
+      - shard: K34
+      - shard: K35
+      - shard: K37
+      - text: "Canvass note: three separate depositors volunteered that 'the old cracksman over the barbershop' must have done it. None could say how he would dial a telephone, let alone a vault."
+  - id: E4
+    title: SHIFT LOGS & TIMETABLES
+    lines:
+      - shard: K16
+      - shard: K19
+      - shard: K20
+      - shard: K21
+      - shard: K22
+      - shard: K23
+      - shard: K28
+      - shard: K29
+      - shard: K31
+      - text: "Timetable appendix: the 4:05 milk train is the only northbound movement between midnight and six."
+  - id: E5
+    title: COUNTY GENERAL & SUNDRY
+    lines:
+      - shard: K36
+      - shard: K38
+      - shard: K39
+      - shard: K40
+      - text: "Sundry: the barbershop chair, the fever ward, and the river reeds keep better hours than the bank."
+
+shards:
+  # ---- G01: the vault was opened between two and three ----
+  - id: K01
+    doc: E1
+    text: "The time-lock disc stopped when the door swung: 2:11 a.m., Sunday night into Monday."
+    supports: [G01]
+  - id: K02
+    doc: E3
+    text: "The porter, from the coal cellar: footsteps overhead 'a while after two — unhurried, like a man who owned the floor.'"
+    supports: [G01]
+  - id: K03
+    doc: E3
+    text: "Beat officer tried the Court Square doors at 1:50 — all fast, all dark, nothing stirring."
+    supports: [G01]
+
+  # ---- G02: opened with a true combination, no force ----
+  - id: K04
+    doc: E1
+    text: "Lock examiner: dialed clean and opened on the first pass. No drill, no soup, no fishing marks in the wards."
+    supports: [G02]
+  - id: K05
+    doc: E1
+    text: "Photographs: dial face unmarked, jamb unsprung, hinges undisturbed. The door was operated, not attacked."
+    supports: [G02]
+  - id: K06
+    doc: E1
+    text: "Tumbler wear is consistent with one practiced entry — no trial runs, no hesitation drag on the third wheel."
+    supports: [G02]
+  - id: K07
+    doc: E1
+    text: "Insurance examiner concurs: 'a key job in everything but the key — whoever dialed it held the true numbers.'"
+    supports: [G02]
+
+  # ---- G03: only the relief combination was live that night ----
+  - id: K08
+    doc: E2
+    text: "Branch memo, Friday: working combination changed at close of business per quarterly schedule."
+    supports: [G03]
+  - id: K09
+    doc: E2
+    text: "Vault log: Friday's combination change witnessed and countersigned by two officers."
+    supports: [G03]
+  - id: K10
+    doc: E2
+    text: "Head office: a relief combination was cut during the July audit and held under seal against lock-out — the only other numbers that door has ever answered to."
+    supports: [G03]
+  - id: K11
+    doc: E2
+    text: "Seal register: the relief-combination envelope logged intact month by month since July — the October line is blank."
+    supports: [G03, G10]
+
+  # ---- G05: the man at the dial worked left-handed ----
+  - id: K12
+    doc: E3
+    text: "The porter's one glimpse through the coal grate: lamp held high in the right hand, the dial worked with the left."
+    supports: [G05]
+  - id: K13
+    doc: E1
+    text: "Smudge drag across the ledger shelf runs right to left — a left hand steadying paper."
+    supports: [G05]
+  - id: K14
+    doc: E1
+    text: "Polish smears on the dial rim arc counterclockwise, the sweep of a left-handed grip."
+    supports: [G05]
+  - id: K15
+    doc: E3
+    text: "A cigarette stubbed cold on the floor — left of the stool, where a left-handed man rests his working arm."
+    supports: [G05]
+
+  # ---- G06: the bonds left in the fiber sample-case ----
+  - id: K16
+    doc: E4
+    text: "Stationery inventory, Thursday: one fiber sample-case missing from the supply closet — noted, not chased."
+    supports: [G06]
+  - id: K17
+    doc: E3
+    text: "The porter: 'past two I heard case latches snap twice, sharp, like a drummer packing up.'"
+    supports: [G06]
+  - id: K18
+    doc: E3
+    text: "Milk-train conductor: a man boarded the 4:05 north with a fiber sample-case and rode standing, holding it on his knees in the vestibule."
+    supports: [G06]
+  - id: K19
+    doc: E4
+    text: "Monday noon: the fiber case ashore in the river reeds below the trestle — empty, latches sprung."
+    supports: [G06]
+
+  # ---- G07: Halloway was in Dorsett until three ----
+  - id: K20
+    doc: E4
+    text: "Elks club steward, Dorsett: the fish fry ran long; Halloway was at the head table until the hall emptied at three."
+    supports: [G07]
+  - id: K21
+    doc: E4
+    text: "Raffle record: Halloway's ticket called at 2:45 — he answered from the floor and took the smoked ham to general applause."
+    supports: [G07]
+  - id: K22
+    doc: E4
+    text: "Road ferry log: Halloway's sedan crossed back toward the city at 3:20 — the forty-minute side of the river."
+    supports: [G07]
+  - id: K23
+    doc: E4
+    text: "Dorsett constable: walked Halloway to his car at three and watched him take the ferry road."
+    supports: [G07]
+
+  # ---- G08: Halloway never held the relief combination ----
+  - id: K24
+    doc: E2
+    text: "Policy letter, head office: branch managers barred from holding relief combinations since the reforms of '44."
+    supports: [G08]
+  - id: K25
+    doc: E2
+    text: "Audit committee minute, August: Halloway's request to hold the relief numbers 'against emergency' DENIED, noted with some asperity."
+    supports: [G08]
+  - id: K26
+    doc: E2
+    text: "The '44 shortage inquiry, final page: the reform that took combinations out of managers' hands — and gave the sealing of them to the audit function."
+    supports: [G08]
+  - id: K27
+    doc: E2
+    text: "Branch counsel: only two copies of the relief numbers existed — head office's, and the audit-room working copy made in July."
+    supports: [G08, G03]
+
+  # ---- G09: Quist was on the switchboard till four ----
+  - id: K28
+    doc: E4
+    text: "Exchange supervisor's log: M. Quist worked the relief switchboard Sunday night, plugged in from ten till four."
+    supports: [G09]
+  - id: K29
+    doc: E4
+    text: "Timed subscriber tickets at 2:15 and 2:50, both in Quist's hand, both initialed at the board."
+    supports: [G09]
+  - id: K30
+    doc: E3
+    text: "The operator on the next board: 'Mabel never left her chair except the once for coffee, and I held her cords the four minutes.'"
+    supports: [G09]
+  - id: K31
+    doc: E4
+    text: "Tram conductor: took Miss Quist home on the 4:10 owl car, same as every relief Sunday."
+    supports: [G09]
+
+  # ---- G10: Quist never saw a combination ----
+  - id: K32
+    doc: E2
+    text: "Procedure card, teller cage: tellers bank blind — floats counted in by an officer each dawn; no teller holds vault numbers."
+    supports: [G10]
+  - id: K33
+    doc: E2
+    text: "Quist's July requisition for vault access to speed the morning count: DENIED, per policy, initialed by the auditor."
+    supports: [G10]
+  - id: K34
+    doc: E3
+    text: "Head cashier: 'In fourteen years Mabel has never once been inside the vault door. That is the system working, not a slight.'"
+    supports: [G10]
+
+  # ---- G11: Renz's hands are ruined ----
+  - id: K35
+    doc: E3
+    text: "The barber: 'I hold Doc's cup for him. Have done for two winters. He can't close his fingers on the handle.'"
+    supports: [G11]
+  - id: K36
+    doc: E5
+    text: "Pension examiner's report: knuckles fused with arthritis; no fine work possible; cannot manage buttons unassisted."
+    supports: [G11]
+  - id: K37
+    doc: E3
+    text: "Telephone company note: all of Renz's calls are operator-placed — he cannot work a dial of any kind, and says so bitterly."
+    supports: [G11]
+
+  # ---- G12: Renz was in the fever ward ----
+  - id: K38
+    doc: E5
+    text: "County General admissions: Renz, A., taken in Saturday noon with influenza fever, ward six."
+    supports: [G12]
+  - id: K39
+    doc: E5
+    text: "Ward sister: 'He never left ward six Sunday night. I turned his pillow at two and he cursed me for it at three.'"
+    supports: [G12]
+  - id: K40
+    doc: E5
+    text: "Visitor book: his nephew signed in Sunday evening and was sent away — 'patient sleeping, no visitors past eight.'"
+    supports: [G12]
+
+facts:
+  - id: G01
+    text: "The vault was opened between two and three, Sunday night."
+  - id: G02
+    text: "It was opened with a true combination — no force, no fishing, first pass."
+  - id: G03
+    text: "The working combination died Friday; only the July relief combination was live that night."
+  - id: G05
+    text: "The man at the dial worked left-handed."
+  - id: G06
+    text: "The bonds left in the bank's own fiber sample-case, north on the 4:05."
+  - id: G07
+    text: "Halloway was at the Dorsett fish fry until three, the forty-minute side of the ferry."
+  - id: G08
+    text: "Halloway never held the relief combination — policy since '44, his own request denied."
+  - id: G09
+    text: "Quist was plugged into the exchange switchboard until four, voices and tickets to prove it."
+  - id: G10
+    text: "Quist has never held or seen a vault combination — tellers bank blind."
+  - id: G11
+    text: "Renz's hands are ruined — he cannot work a telephone dial, let alone a vault."
+  - id: G12
+    text: "Renz was in the County General fever ward from Saturday noon."
+
+eliminations:
+  - suspect: T1
+    paths:
+      - [G01, G07]
+      - [G03, G08]
+      - [G02, G08]
+      - [G06, G07]
+  - suspect: T2
+    paths:
+      - [G01, G09]
+      - [G03, G10]
+      - [G02, G10]
+      - [G06, G09]
+  - suspect: T3
+    paths:
+      - [G12]
+      - [G11, G05]
+      - [G11, G02]
+      - [G06, G11]
+
+contradictions:
+  - a: K08
+    b: K04
+    note: "The working combination died Friday at close — and Sunday night the door opened clean on the first pass. Whatever was dialed, it was not the numbers that no longer existed."
+  - a: K18
+    b: K19
+    note: "The case rode north full at 4:05 and came ashore south, empty, below the trestle. It did not swim. Someone brought it back the way auditors travel."
+
+pivots: [K10, K12, K26]
+
+truth:
+  culprit: T4
+  motive: "Nash cut the relief combination himself during the July audit and initialed the seal he later broke. Fourteen years of counting other men's money, one October page left blank, and a left-handed man let himself in politely."
+  summary: "Silas Nash, the night auditor, opened the Halloway vault. The relief combination cut in July lived in the audit-room copy; the October seal line is blank; the man at the dial worked left-handed by lamplight and rode the 4:05 with the bank's own sample case."
+  reveal:
+    - "The vault opened at 2:11 for the true numbers — two days after the working combination died."
+    - "Only the July relief combination was live. Managers were barred from it in '44. Tellers bank blind. The old cracksman was in ward six with hands that cannot dial."
+    - "The man at the dial worked left-handed and carried the bonds out in the bank's own fiber case, north on the 4:05."
+    - "The audit-room copy of the relief numbers was made in July, sealed in July — and the October seal line is blank."
+    - "Silas Nash counted the bank's money by night, cut its spare key in July, and wrote the whole story left-handed. The blank line in the seal register is his signature."
