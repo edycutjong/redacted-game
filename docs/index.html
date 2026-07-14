@@ -14,6 +14,9 @@
 <meta property="og:image:height" content="1260">
 <meta property="og:url" content="https://edycutjong.github.io/redacted-game/">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,900&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
   :root{
     --amber:#FACC15;
@@ -25,19 +28,23 @@
     --ink:#EAE3D2;
     --muted:#A8A08C;
     --muted2:#6b6455;
+    --font-display:'Fraunces', Georgia, 'Times New Roman', serif;
+    --font-body:'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
   }
   *,*::before,*::after{box-sizing:border-box;}
   html,body{margin:0;padding:0;}
   body{
     background:var(--base);
     color:var(--ink);
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-family:var(--font-body);
     line-height:1.55;
     overflow-x:hidden;
     -webkit-font-smoothing:antialiased;
   }
   .mono{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;}
   a{color:inherit;}
+  h1.title,.section-head h2,.card h3,.final-cta h2,.band blockquote,
+  .tcard .q,.faq summary{font-family:var(--font-display);}
   img,svg{max-width:100%;height:auto;display:block;}
 
   /* film grain / vignette background */
@@ -252,6 +259,27 @@
   footer a:hover{color:var(--amber);}
   .foot-links{display:flex;gap:20px;flex-wrap:wrap;}
 
+  /* field notes (in-world dispatches, not real reviews) */
+  .testis{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;}
+  .tcard{position:relative;background:var(--panel);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:26px 22px 22px;transition:transform .2s ease,border-color .2s ease;}
+  .tcard:hover{transform:translateY(-4px);border-color:rgba(250,204,21,0.35);}
+  .tcard .mark{font-family:Georgia,serif;font-size:42px;line-height:0;color:var(--amber);opacity:0.5;}
+  .tcard .q{margin:6px 0 18px;font-size:1rem;line-height:1.5;color:var(--ink);}
+  .tcard .who{display:flex;align-items:center;gap:12px;}
+  .tcard .av{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;color:#0B0A07;background:linear-gradient(120deg,var(--amber),var(--rose));}
+  .tcard .u{font-weight:700;font-size:0.9rem;}
+  .tcard .r{color:var(--muted2);font-size:0.78rem;}
+  .note-flag{text-align:center;color:var(--muted2);font-size:0.78rem;margin-top:22px;}
+  /* faq */
+  .faq{max-width:780px;margin:0 auto;display:flex;flex-direction:column;gap:12px;}
+  .faq details{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:0 20px;transition:border-color .2s ease,background .2s ease;}
+  .faq details[open]{border-color:rgba(250,204,21,0.35);background:rgba(255,255,255,0.03);}
+  .faq summary{list-style:none;cursor:pointer;padding:18px 0;font-size:1rem;font-weight:700;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary .chev{flex:none;width:22px;height:22px;border-radius:6px;display:flex;align-items:center;justify-content:center;background:rgba(250,204,21,0.14);color:var(--amber);transition:transform .2s ease;}
+  .faq details[open] summary .chev{transform:rotate(45deg);}
+  .faq .a{padding:0 0 20px;color:var(--muted);font-size:0.95rem;line-height:1.6;}
+
   @media (prefers-reduced-motion:reduce){
     *{animation-duration:0.001ms !important; animation-iteration-count:1 !important;}
   }
@@ -338,6 +366,7 @@
       REDACTED
     </div>
     <div class="navlinks">
+      <a class="btn btn-ghost" href="#faq">FAQ</a>
       <a class="btn btn-ghost" href="/pitch/"><span class="label-long">Pitch </span>Deck</a>
       <a class="btn btn-ghost" href="https://github.com/edycutjong/redacted-game" target="_blank" rel="noopener">GitHub</a>
       <a class="btn btn-primary" href="https://www.reddit.com/r/RedactedGame/" target="_blank" rel="noopener">Play the Case</a>
@@ -628,6 +657,36 @@
     <cite>— the whole pitch, in one sentence</cite>
   </div>
 </div>
+
+<section id="voices" class="wrap">
+  <div class="section-head">
+    <span class="kicker">Field notes</span>
+    <h2>The precinct talks in the comments</h2>
+    <p>Every filed shard is a line in the case. These are the kinds of notes the
+      board produces — the voice of the investigation, in the detectives' words.</p>
+  </div>
+  <div class="testis">
+    <div class="tcard"><div class="mark">&ldquo;</div><p class="q">My shard was a pawn-ticket dated the 14th — two days after the fire. Filed it, and the watchman the whole board was sure about got struck off. Chills.</p><div class="who"><div class="av">DS</div><div><div class="u">u/desk_sergeant</div><div class="r">Case #17 · first correct accuser</div></div></div></div>
+    <div class="tcard"><div class="mark">&ldquo;</div><p class="q">I had one line nobody else could see. Turns out it was the contradiction that lit the whole red string. You genuinely need every reader in the room.</p><div class="who"><div class="av">NW</div><div><div class="u">u/night_ward</div><div class="r">filed the pivotal shard</div></div></div></div>
+    <div class="tcard"><div class="mark">&ldquo;</div><p class="q">Read the dossier, thought I had it, then the comments flipped everything. We closed the case as a crowd at hour 19. Best thread I've read on Reddit in months.</p><div class="who"><div class="av">AR</div><div><div class="u">u/archivist_r</div><div class="r">Case #18 · verdict crowd</div></div></div></div>
+  </div>
+  <p class="note-flag">In-world flavor from the game's demo cases — REDACTED has no external users yet; nothing here is presented as a real customer review.</p>
+</section>
+
+<section id="faq" class="wrap">
+  <div class="section-head">
+    <span class="kicker">Questions</span>
+    <h2>Before you open the case file</h2>
+  </div>
+  <div class="faq">
+    <details open><summary>How do I play? <span class="chev">+</span></summary><div class="a">Open the case post on r/RedactedGame. Your dossier is censored differently from everyone else's — peel your one visible line, file it as an evidence card, and watch it strike suspects or light a contradiction. Pool clues in the comments, then accuse before the verdict hour.</div></details>
+    <details><summary>Why can't I solve it alone? <span class="chev">+</span></summary><div class="a">By design. Every reader gets a different partial shard of the same case, so no single dossier contains enough to convict — the crowd has to combine its lines, which makes every new reader structurally valuable.</div></details>
+    <details><summary>Is it AI-generated? <span class="chev">+</span></summary><div class="a">No — zero runtime AI. Every case is handcrafted and passed through a solvability linter (a 1,000-trial Monte-Carlo using the same deduction engine as the game) so it's guaranteed solvable but never trivial.</div></details>
+    <details><summary>Is it free? <span class="chev">+</span></summary><div class="a">Yes. It runs natively inside a Reddit post via Devvit — no install, no account beyond your Reddit login, no payments.</div></details>
+    <details><summary>What's it built on? <span class="chev">+</span></summary><div class="a">Devvit Web: a React webview, a Hono server over Redis, an offline case compiler, and Reddit realtime. No external services and an empty fetch allowlist.</div></details>
+    <details><summary>Is the code open? <span class="chev">+</span></summary><div class="a">Yes — full source on <a href="https://github.com/edycutjong/redacted-game" target="_blank" rel="noopener" style="color:var(--amber)">GitHub</a> under MIT, with CI, 100% coverage on the shared/core/routes gate, and 269 passing tests.</div></details>
+  </div>
+</section>
 
 <section class="final-cta">
   <div class="wrap">
