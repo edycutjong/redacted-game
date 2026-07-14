@@ -1,5 +1,3 @@
-not trivia — closed-world deduction; zero AI, handcrafted linted cases
-
 <div align="center">
   <img src="docs/icon.svg" alt="REDACTED" width="144" height="144" />
   <h1>REDACTED</h1>
