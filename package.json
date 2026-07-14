@@ -2,7 +2,16 @@
   "private": true,
   "name": "redacted-game",
   "version": "1.0.0",
+  "description": "🕵️ Asymmetric-information detective game — each player holds different censored evidence; zero AI, handcrafted linted cases (Devvit)",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edycutjong/redacted-game.git"
+  },
+  "homepage": "https://github.com/edycutjong/redacted-game#readme",
+  "bugs": {
+    "url": "https://github.com/edycutjong/redacted-game/issues"
+  },
   "type": "module",
   "scripts": {
     "build": "vite build",
