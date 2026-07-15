@@ -274,6 +274,10 @@ You (the human) run these — an agent cannot run `devvit playtest`.
 Run `npm run check:submission` before submitting. The demo-post URL stays a
 placeholder (and the gate stays red) until the post is live.
 
+> **The remaining `[ ]` items need no app approval — do them now.** The Reddit
+> review only unlocks the *public* App Directory listing + icon; judging happens on
+> your (public) test sub, which is entirely in your control.
+
 - App listing: https://developers.reddit.com/apps/the-redacted-game
 - Devpost project: https://devpost.com/software/redacted-0jze1y
 - Demo video: https://www.youtube.com/watch?v=nWXwBE4XXTs
