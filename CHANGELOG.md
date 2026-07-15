@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/edycutjong/redacted-game/compare/v1.0.0...v1.1.0) (2026-07-15)
+
+
+### Features
+
+* **app:** add marketingAssets.icon (1024px app avatar) for the Reddit app listing ([d0812cd](https://github.com/edycutjong/redacted-game/commit/d0812cdfb2d687a53c6f34ca2ae8107f0d55ce86))
+
 # 1.0.0 (2026-07-14)
 
 
