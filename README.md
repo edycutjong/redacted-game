@@ -6,10 +6,12 @@
 
   <br/><br/>
 
-  [![Play the Demo Post](https://img.shields.io/badge/%E2%96%B6_Play_the-Demo_Post-FACC15?style=for-the-badge&labelColor=0B0A07)](https://www.reddit.com/r/the_redacted_game_dev/)
-  [![Landing Page](https://img.shields.io/badge/%F0%9F%8C%90_Landing-Page-FACC15?style=for-the-badge&labelColor=0B0A07)](https://edycutjong.github.io/redacted-game/)
-  [![Pitch Deck](https://img.shields.io/badge/%F0%9F%93%91_Pitch-Deck-F43F5E?style=for-the-badge&labelColor=0B0A07)](https://edycutjong.github.io/redacted-game/pitch/)
-  [![Games with a Hook](https://img.shields.io/badge/Reddit-Games_with_a_Hook-8B5CF6?style=for-the-badge&labelColor=0B0A07)](https://redditgameswithahook.devpost.com/)
+  [![Play on Reddit](https://img.shields.io/badge/Play_on-Reddit-FACC15?style=for-the-badge&labelColor=0B0A07)](https://www.reddit.com/r/the_redacted_game_dev/)
+  [![Watch Demo](https://img.shields.io/badge/Watch-Demo-F43F5E?style=for-the-badge&labelColor=0B0A07)](https://www.youtube.com/watch?v=nWXwBE4XXTs)
+  [![Devpost](https://img.shields.io/badge/View_on-Devpost-003E54?style=for-the-badge&labelColor=0B0A07)](https://devpost.com/software/redacted-0jze1y)
+  [![Landing Page](https://img.shields.io/badge/Landing-Page-FACC15?style=for-the-badge&labelColor=0B0A07)](https://edycutjong.github.io/redacted-game/)
+  [![Pitch Deck](https://img.shields.io/badge/Pitch-Deck-F43F5E?style=for-the-badge&labelColor=0B0A07)](https://edycutjong.github.io/redacted-game/pitch/)
+  [![Games with a Hook](https://img.shields.io/badge/Reddit-Games_with_a_Hook-8B5CF6?style=for-the-badge&labelColor=0B0A07)](https://redditgameswithahook.devpost.com)
 
   <br/>
 
