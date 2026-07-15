@@ -281,7 +281,7 @@ placeholder (and the gate stays red) until the post is live.
 - App listing: https://developers.reddit.com/apps/the-redacted-game
 - Devpost project: https://devpost.com/software/redacted-0jze1y
 - Demo video: https://www.youtube.com/watch?v=nWXwBE4XXTs
-- Demo post: <DEMO_POST_URL>
+- Demo post: https://www.reddit.com/r/the_redacted_game_dev/s/f04ylDXAJr
 - [x] `npm run lint` clean
 - [x] `npm run type-check` clean
 - [x] `npm test` green (269/269), `npm run test:coverage` at 100%
@@ -289,7 +289,7 @@ placeholder (and the gate stays red) until the post is live.
 - [x] Published to the App Directory (`devvit publish`, in review)
 - [x] 60-second demo video recorded & published (link above)
 - [x] Public repo + Devpost project page linked
-- [ ] `r/the_redacted_game_dev` set to **Public**, demo post seeded (`Seed Demo Case`) and verified against `DEMO.md`
+- [x] `r/the_redacted_game_dev` set to **Public**, demo post seeded (`Seed Demo Case`) and verified against `DEMO.md`
 - [ ] Demo-post URL filled above + Devpost form submitted
 
 ## 💻 Commands
