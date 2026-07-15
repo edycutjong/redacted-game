@@ -89,5 +89,8 @@
   },
   "dev": {
     "subreddit": "the_redacted_game_dev"
+  },
+  "marketingAssets": {
+    "icon": "assets/icon.png"
   }
 }
