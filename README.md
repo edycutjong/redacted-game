@@ -6,7 +6,7 @@
 
   <br/><br/>
 
-  [![Play the Demo Post](https://img.shields.io/badge/%E2%96%B6_Play_the-Demo_Post-FACC15?style=for-the-badge&labelColor=0B0A07)](https://www.reddit.com/r/RedactedGame/)
+  [![Play the Demo Post](https://img.shields.io/badge/%E2%96%B6_Play_the-Demo_Post-FACC15?style=for-the-badge&labelColor=0B0A07)](https://www.reddit.com/r/the_redacted_game_dev/)
   [![Landing Page](https://img.shields.io/badge/%F0%9F%8C%90_Landing-Page-FACC15?style=for-the-badge&labelColor=0B0A07)](https://edycutjong.github.io/redacted-game/)
   [![Pitch Deck](https://img.shields.io/badge/%F0%9F%93%91_Pitch-Deck-F43F5E?style=for-the-badge&labelColor=0B0A07)](https://edycutjong.github.io/redacted-game/pitch/)
   [![Games with a Hook](https://img.shields.io/badge/Reddit-Games_with_a_Hook-8B5CF6?style=for-the-badge&labelColor=0B0A07)](https://redditgameswithahook.devpost.com/)
@@ -248,12 +248,12 @@ You (the human) run these — an agent cannot run `devvit playtest`.
 1. **Create the test subreddit from your aged main account on day one.** New
    hackathon subreddits are being **auto-banned ("Rule #2")** by Reddit safety
    automation, *including a re-ban immediately after you install a Devvit app*.
-   Front-load the round-trip: create r/RedactedGame, add a normal pinned post
+   Front-load the round-trip: create r/the_redacted_game_dev, add a normal pinned post
    *before* installing anything, and keep the unban-request forum thread handy —
    staff unban manually when you post `username + subreddit`. Expect a second
    ban at first app install.
 2. `npm run login` (`devvit login`), then `npm run dev` (`devvit playtest
-   r/RedactedGame`).
+   r/the_redacted_game_dev`).
 3. **Probe the onComment payload before trusting the parser.** The
    `onCommentCreate` trigger exists (docs-cache `triggers.md`) but the exact
    `CommentV2` field shape is only confirmed at runtime. The handler

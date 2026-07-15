@@ -46,7 +46,7 @@ so the next person (or the playtest) doesn't relearn them.
 ## Ops landmine (carried from VERIFIED.md, restated because it will bite)
 
 - **New hackathon subreddits are being auto-banned**, and **re-banned right after
-  a Devvit app install.** Create r/RedactedGame from an aged account on day one,
+  a Devvit app install.** Create r/the_redacted_game_dev from an aged account on day one,
   add a normal pinned post before installing, keep the unban forum thread handy,
   and expect the second ban at install time. This is an account/ops problem, not a
   code problem — front-load it.

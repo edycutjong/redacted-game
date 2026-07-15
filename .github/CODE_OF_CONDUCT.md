@@ -14,7 +14,7 @@ empathy, being respectful of differing opinions, and gracefully accepting
 constructive feedback. Unacceptable behavior includes harassment, trolling,
 insulting comments, and publishing others' private information.
 
-This extends to in-game conduct on the live `r/RedactedGame` demo post: evidence
+This extends to in-game conduct on the live `r/the_redacted_game_dev` demo post: evidence
 cards and accusations are player content moderated by the same standards as any
 other comment on Reddit, plus the mod-menu tools (`REDACTED: Hide Reported Card`)
 described in the README.

@@ -5,7 +5,7 @@ seconds is personally holding a line the crowd has been arguing about since dawn
 
 ## Setup (once, by the mod)
 
-1. Install the app on r/RedactedGame and open the subreddit menu.
+1. Install the app on r/the_redacted_game_dev and open the subreddit menu.
 2. Run **REDACTED: Seed Demo Case**. This deterministically restores **Case #17 —
    The Larchmont Fire** to its exact mid-solve state:
    - meter at **~61% UNREDACTED**,
