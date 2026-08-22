@@ -37,7 +37,7 @@
     "@devvit/start": "0.13.11",
     "@devvit/web": "0.13.9",
     "@hono/node-server": "2.0.5",
-    "devvit": "0.13.11",
+    "devvit": "0.14.1",
     "hono": "^4.13.2",
     "react": "19.2.8",
     "react-dom": "19.2.7",
